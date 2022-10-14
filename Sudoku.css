@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:400,500,600,700&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+    
+}
+nav{
+    height: 80px;
+    background: #308d46;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+}
+nav .logo{
+    font-size: 33px;
+    color: #fff;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    
+    padding: 8px 10px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+nav ul li{
+    margin: 0px 5px;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    color: #1b1b1b;
+    background-color: #fff;
+}
+#click:checked ~.menu-btn i:before{
+    content: "\f00d";
+}
+#click{
+    display: none;
+}
+
+
+body{
+    font-family: calibri ,sans-serif;
+    
+}
+.container{
+    height: 500px;
+    width: 500px;
+    /* border: 1px solid black; */
+    align-items: center;
+    text-align: center;
+    margin: auto;  
+    margin-top: 2rem;
+}
+table{
+    border-collapse: collapse;
+    font-size: 1.4rem;
+    margin:0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+}
+td{
+    border: solid thin;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    padding: 0;
+    
+}
+colgroup,tbody{
+    border: solid medium #308d46;
+}
+button{
+    width: 70px;
+    height: 40px;
+    background-color:#308d46 ;
+    border-radius: 7px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 5px 10px 20px rgba(0, 0,0, 0.3);
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+    padding-bottom: 2rem;
+   
+}
+.buttons>:nth-child(2){
+    width: 100px;
+}
+button:hover{
+    background: #308d46ce;
+    
+}
+
+
+@media (max-width:940px)  {
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left:-100%;
+        background-color: #111;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+    #click:checked ~ ul {
+        left: 0%;
+        
+    }
+    nav ul li{
+        margin: 40px 0;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+    }
+    nav ul li a:hover,
+    nav ul li a.active{
+        color: #308d46;
+        background: none;
+
+    }
+    nav .menu-btn i{
+        display: block;
+    }
+}
